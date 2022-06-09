@@ -1,4 +1,4 @@
-set PREVIEW_MODE "RECOVERY MODE\nby ErgFox3ds\n \nCredits:\nergfox9\nergfox3ds\neggfox\n0eggfox0"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCredits:\nergfox9\nergfox3ds\neggfox\n0eggfox0"
 set GM9IN "0:/recovery/in"
 if	not find $[GM9IN] NULL
 	mkdir $[GM9IN]
@@ -7,7 +7,7 @@ end
 #####################Main Menu####################
 
 @Start
-set PREVIEW_MODE "RECOVERY MODE\nby ErgFox3ds\n \nCredits:\nergfox9\nergfox3ds\neggfox\n0eggfox0"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCredits:\nergfox9\nergfox3ds\neggfox\n0eggfox0"
 
 labelsel -s "Choose an Option." MainMenu_*
 goto Start
@@ -15,7 +15,7 @@ goto Start
 ##################Backup Options##################
 
 @MainMenu_Backup_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nBackup Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nBackup Options"
 
 labelsel -o -s "Choose an Option." Backup_Options_*
 goto Start
@@ -23,7 +23,7 @@ goto Start
 ##################SysNAND Backup##################
 
 @Backup_Options_SysNAND_Backup
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nBackup Options\n>SysNAND Backup"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nBackup Options\n>SysNAND Backup"
 
 if	not ask "Create a SysNAND backup in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto MainMenu_Backup_Options
@@ -41,7 +41,7 @@ goto MainMenu_Backup_Options
 ##################EmuNAND Backup##################
 
 @Backup_Options_EmuNAND_Backup
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nBackup Options\n>EmuNAND Backup"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nBackup Options\n>EmuNAND Backup"
 
 if	not ask "Create a EmuNAND backup in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto MainMenu_Backup_Options
@@ -59,7 +59,7 @@ goto MainMenu_Backup_Options
 ##################Restore Options#################
 
 @MainMenu_Restore_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nRestore Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nRestore Options"
 
 labelsel -o -s "Choose an Option." Restore_Options_*
 goto Start
@@ -67,7 +67,7 @@ goto Start
 ##############SysNAND Restore (full)##############
 
 @Restore_Options_SysNAND_Restore_(full)
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nRestore Options\n>SysNAND Restore (full)"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nRestore Options\n>SysNAND Restore (full)"
 
 if	not ask "!!WARNING!!\nSystem exploit will not be protected!\nProceed only if you know what you're doing!\n \nContinue?"
 	goto MainMenu_Restore_Options
@@ -107,7 +107,7 @@ goto MainMenu_Restore_Options
 ##############SysNAND Restore (safe)##############
 
 @Restore_Options_SysNAND_Restore_(safe)
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nRestore Options\n>SysNAND Restore (safe)"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nRestore Options\n>SysNAND Restore (safe)"
 
 if	chk $[HAX] ""
 	echo "No qualifying exploit was found.\nAborting to avoid bricking the unit."
@@ -143,7 +143,7 @@ goto MainMenu_Restore_Options
 ##################EmuNAND Restore#################
 
 @Restore_Options_EmuNAND_Restore
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nRestore Options\n>EmuNAND Restore"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nRestore Options\n>EmuNAND Restore"
 
 if	findnot E:/ NULL
 	echo "No EmuNAND detected. Aborting."
@@ -174,7 +174,7 @@ goto MainMenu_Restore_Options
 #################CTRNAND Transfer#################
 
 @MainMenu_CTRNAND_Transfer
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCTRNAND Transfer"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCTRNAND Transfer"
 
 if	not filesel "Select a CTRNAND transfer file.\nCTRNAND transfer file should be located in\n$[GM9IN] folder." $[GM9IN]/*ctrtransfer*.bin CTRNAND
 	goto Start
@@ -229,7 +229,7 @@ goto Start
 ####################Hax Options###################
 
 @MainMenu_Hax_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nHax Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nHax Options"
 
 labelsel -o -s "Choose an Option." Hax_Options_*
 goto Start
@@ -237,7 +237,7 @@ goto Start
 ############Boot9Strap Install Options############
 
 @Hax_Options_Install_Boot9Strap
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nHax Options\n>Boot9strap Install Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nHax Options\n>Boot9strap Install Options"
 
 labelsel -o -s "Choose an Option." Install_Boot9Strap_*
 goto MainMenu_Hax_Options
@@ -245,7 +245,7 @@ goto MainMenu_Hax_Options
 #############Normal Boot9Strap Install############
 
 @Install_Boot9Strap_Normal_Install
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nHax Options\n>Boot9strap Install Options\n>>Normal Boot9strap Install"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nHax Options\n>Boot9strap Install Options\n>>Normal Boot9strap Install"
 
 if	not ask "Install Boot9Strap Normally?\nYou should have the boot9strap files in\n0:/boot9strap/ before proceeding."
 	goto Hax_Options_Install_Boot9Strap
@@ -306,7 +306,7 @@ goto Hax_Options_Install_Boot9Strap
 ############PC-Less Boot9Strap Install############
 
 @Install_Boot9Strap_PC-Less_Install
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nHax Options\n>Boot9strap Install Options\n>>PC-Less Boot9strap Install"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nHax Options\n>Boot9strap Install Options\n>>PC-Less Boot9strap Install"
 
 if	not ask "Proceed with PC-Less B9S Installation?\nYou should have the in-files in you SDMC.\nSee GM9Megascript Repo for more details."
 	goto Hax_Options_Install_Boot9Strap
@@ -412,7 +412,7 @@ goto Hax_Options_Install_Boot9Strap
 ###################Hax Uninstall##################
 
 @Hax_Options_Un-install_Hax
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nHax Options\n>Hax Un-install"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nHax Options\n>Hax Un-install"
 
 if	not ask "!!WARNING!!\nThis will completely remove CFW and\nrevert your system to stock.\n \nProceed anyway?"
 	goto MainMenu_Hax_Options
@@ -506,7 +506,7 @@ goto MainMenu_Hax_Options
 ################Restore H&S################
 
 @FBI_Restore_H&S
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nFBI to H&S Options\n>Restore H&S"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nFBI to H&S Options\n>Restore H&S"
 
 if	not ask "Restore H&S?"
 	goto MainMenu_FBI_to_H&S_Options
@@ -570,7 +570,7 @@ goto MainMenu_FBI_to_H&S_Options
 ###################Dump Options###################
 
 @MainMenu_Dump_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options"
 
 labelsel -o -s "Choose an Option." Dump_Options_*
 goto Start
@@ -578,7 +578,7 @@ goto Start
 ###################System Save Dump Options###################
 
 @Dump_Options_System_Save_Dump_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System Save Dump Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System Save Dump Options"
 
 labelsel -o -s "Choose an Option." SysSave_Options_*
 goto MainMenu_Dump_Options
@@ -586,7 +586,7 @@ goto MainMenu_Dump_Options
 #################Dump nnidsave.bin################
 
 @SysSave_Options_Dump_nnidsave.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System Save Dump Options\n>>Dump nnidsave.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System Save Dump Options\n>>Dump nnidsave.bin"
 
 if	ask "Dump nnidsave.bin in $[GM9OUT]?"
 	findnot $[GM9OUT]/nnidsave_??.bin OUTPATH
@@ -598,7 +598,7 @@ goto Dump_Options_System_Save_Dump_Options
 ################Dump friendsave.bin###############
 
 @SysSave_Options_Dump_friendsave.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System Save Dump Options\n>>Dump friendsave.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System Save Dump Options\n>>Dump friendsave.bin"
 
 if	ask "Dump friendsave.bin in $[GM9OUT]?"
 	findnot $[GM9OUT]/friendsave_??.bin OUTPATH
@@ -610,7 +610,7 @@ goto Dump_Options_System_Save_Dump_Options
 #################Dump seedsave.bin################
 
 @SysSave_Options_Dump_seedsave.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System Save Dump Options\n>>Dump seedsave.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System Save Dump Options\n>>Dump seedsave.bin"
 
 if	ask "Dump seedsave.bin in $[GM9OUT]?"
 	findnot $[GM9OUT]/seedsave_??.bin OUTPATH
@@ -622,7 +622,7 @@ goto Dump_Options_System_Save_Dump_Options
 #################Dump nagsave.bin#################
 
 @SysSave_Options_Dump_nagsave.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System Save Dump Options\n>>Dump nagsave.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System Save Dump Options\n>>Dump nagsave.bin"
 
 if	ask "Dump nagsave.bin in $[GM9OUT]?"
 	findnot $[GM9OUT]/nagsave_??.bin OUTPATH
@@ -634,7 +634,7 @@ goto Dump_Options_System_Save_Dump_Options
 ################Dump configsave.bin###############
 
 @SysSave_Options_Dump_configsave.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System Save Dump Options\n>>Dump configsave.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System Save Dump Options\n>>Dump configsave.bin"
 
 if	ask "Dump configsave.bin in $[GM9OUT]?"
 	findnot $[GM9OUT]/configsave_??.bin OUTPATH
@@ -646,7 +646,7 @@ goto Dump_Options_System_Save_Dump_Options
 #############System File Dump Options#############
 
 @Dump_Options_System_File_Dump_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options"
 
 labelsel -o -s "Choose an Option." SysFile_Options_*
 goto MainMenu_Dump_Options
@@ -654,7 +654,7 @@ goto MainMenu_Dump_Options
 ############Dump LocalFriendCodeSeed_B############
 
 @SysFile_Options_Dump_LocalFriendCodeSeedB
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump LocalFriendCodeSeed_B"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump LocalFriendCodeSeed_B"
 
 if	ask "Dump LocalFriendCodeSeed_B in $[GM9OUT]?"
 	findnot $[GM9OUT]/$[SERIAL]_LocalFriendCodeSeed_B_?? OUTPATH
@@ -666,7 +666,7 @@ goto Dump_Options_System_File_Dump_Options
 #################Dump SecureInfo_A################
 
 @SysFile_Options_Dump_SecureInfoA
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump SecureInfo_A"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump SecureInfo_A"
 
 if	find 1:/rw/sys/SecureInfo_A NULL
 	if	ask "Dump SecureInfo_A in $[GM9OUT]?"
@@ -694,7 +694,7 @@ goto Dump_Options_System_File_Dump_Options
 #################Dump movable.sed#################
 
 @SysFile_Options_Dump_movable.sed
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump movable.sed"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump movable.sed"
 
 if	ask "Dump movable.sed in $[GM9OUT]?"
 	findnot $[GM9OUT]/$[SERIAL]_movable_??.sed OUTPATH
@@ -706,7 +706,7 @@ goto Dump_Options_System_File_Dump_Options
 ##################Dump ticket.db##################
 
 @SysFile_Options_Dump_ticket.db
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump ticket.db"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump ticket.db"
 
 if	ask "Dump ticket.db in $[GM9OUT]?"
 	findnot $[GM9OUT]/$[SERIAL]_ticket_??.db OUTPATH
@@ -718,7 +718,7 @@ goto Dump_Options_System_File_Dump_Options
 ###################Dump title.db##################
 
 @SysFile_Options_Dump_title.db
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump title.db"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump title.db"
 
 if	ask "Dump title.db in $[GM9OUT]?"
 	findnot $[GM9OUT]/$[SERIAL]_title_??.db OUTPATH
@@ -730,7 +730,7 @@ goto Dump_Options_System_File_Dump_Options
 ##################Dump import.db##################
 
 @SysFile_Options_Dump_import.db
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump import.db"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump import.db"
 
 if	ask "Dump import.db in $[GM9OUT]?"
 	findnot $[GM9OUT]/$[SERIAL]_import_??.db OUTPATH
@@ -742,7 +742,7 @@ goto Dump_Options_System_File_Dump_Options
 ###################Dump certs.db##################
 
 @SysFile_Options_Dump_certs.db
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>System File Dump Options\n>>Dump certs.db"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>System File Dump Options\n>>Dump certs.db"
 
 if	ask "Dump certs.db in $[GM9OUT]?"
 	findnot $[GM9OUT]/$[SERIAL]_certs_??.db OUTPATH
@@ -754,7 +754,7 @@ goto Dump_Options_System_File_Dump_Options
 ##################Dump GBAVC.sav##################
 
 @Dump_Options_Dump_GBAVC.sav
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>Dump GBAVC.sav"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>Dump GBAVC.sav"
 
 if	ask "Dump gbavc.sav in $[GM9OUT]?\nFor GodMode9 v.1.4.1 and below only."
 	findnot $[GM9OUT]/gbavc_??.sav OUTPATH
@@ -766,7 +766,7 @@ goto MainMenu_Dump_Options
 ###########Dump Boot9.bin and Boot11.bin##########
 
 @Dump_Options_Dump_Boot9.bin_&_Boot11.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>Dump boot9.bin & boot11.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>Dump boot9.bin & boot11.bin"
 
 if	not find M:/boot*.bin NULL
 	echo "Boot9.bin and/or Boot11.bin not present.\nAborting!"
@@ -788,7 +788,7 @@ goto MainMenu_Dump_Options
 ###################Dump OTP.bin###################
 
 @Dump_Options_Dump_OTP.bin
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>Dump OTP.bin"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>Dump OTP.bin"
 
 if	not ask "Dump otp.bin in $[GM9OUT]? \n(This will overwrite any existing otp.bin!)"
 	goto MainMenu_Dump_Options
@@ -802,7 +802,7 @@ goto MainMenu_Dump_Options
 ###################Dump essential.exefs###################
 
 @Dump_Options_Dump_essential.exefs
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>Dump essential.exefs"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>Dump essential.exefs"
 
 if	not ask "Dump essential.exefs in $[GM9OUT]?"
 	goto MainMenu_Dump_Options
@@ -816,7 +816,7 @@ goto MainMenu_Dump_Options
 #################Dump CITRA Files#################
 
 @Dump_Options_Dump_CITRA_Files
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nDump Options\n>Dump CITRA Files"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nDump Options\n>Dump CITRA Files"
 
 if	not ask "Create dump of Citra files in $[GM9OUT]/Citra?\n(This will overwrite any existing Citra files!)\n(May fail if you use a custom font!)\n(This will dump System Archives)\n(This will dump Shared Fonts)\n(This will dump config)"
 	goto MainMenu_Dump_Options
@@ -874,7 +874,7 @@ goto MainMenu_Dump_Options
 ##################Inject Options##################
 
 @MainMenu_Inject_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options"
 
 labelsel -o -s "Choose an Option." Inject_Options_*
 goto Start
@@ -882,7 +882,7 @@ goto Start
 ################Inject Friend Save################
 
 @Inject_Options_Inject_FriendSave
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject Friend Save"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject Friend Save"
 
 if	not filesel "Select the friendsave you want to inject." $[GM9OUT]/friendsave_* FRIEND
 	goto MainMenu_Inject_Options
@@ -900,7 +900,7 @@ goto MainMenu_Inject_Options
 ###########Inject LocalFriendCodeSeed_B###########
 
 @Inject_Options_Inject_LocalFriendCodeSeedB
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject LocalFriendCodeSeed_B"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject LocalFriendCodeSeed_B"
 
 if	not ask "Inject LocalFriendCodeSeed_B from $[GM9OUT]?\n(This will overwrite your 3DS's current\nLocalFriendCodeSeed_B!)"
 	goto MainMenu_Inject_Options
@@ -918,7 +918,7 @@ goto MainMenu_Inject_Options
 ################Inject SecureInfo_A###############
 
 @Inject_Options_Inject_SecureInfoA
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject SecureInfo_A"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject SecureInfo_A"
 
 if	not ask "Inject SecureInfo_A from $[GM9OUT]?\n(This will overwrite your 3DS's current\nSecureInfo_A!)"
 	goto MainMenu_Inject_Options
@@ -936,7 +936,7 @@ goto MainMenu_Inject_Options
 ################Inject movable.sed################
 
 @Inject_Options_Inject_movable.sed
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject movable.sed"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject movable.sed"
 
 if	not ask "Inject movable.sed from $[GM9OUT]?\n(This will overwrite your 3DS's current\nmovable.sed!)"
 	goto MainMenu_Inject_Options
@@ -954,7 +954,7 @@ goto MainMenu_Inject_Options
 #################Inject ticket.db#################
 
 @Inject_Options_Inject_ticket.db
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject ticket.db"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject ticket.db"
 
 if	not ask "Inject ticket.db from $[GM9OUT]?\n(This will overwrite your 3DS's current\nticket.db!)"
 	goto MainMenu_Inject_Options
@@ -972,7 +972,7 @@ goto MainMenu_Inject_Options
 ##################Inject title.db#################
 
 @Inject_Options_Inject_title.db
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject title.db"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject title.db"
 
 if	not ask "Inject title.db from $[GM9OUT]?\n(This will overwrite your 3DS's current\ntitle.db!)"
 	goto MainMenu_Inject_Options
@@ -990,7 +990,7 @@ goto MainMenu_Inject_Options
 #################Inject GBAVC.sav#################
 
 @Inject_Options_Inject_GBAVC.sav
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nInject Options\n>Inject GBA.sav"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nInject Options\n>Inject GBA.sav"
 
 if	not ask "Inject gbavc.sav from $[GM9OUT]?\n(This will overwrite your 3DS's current\ngbavc.sav file!)\nFor GodMode9 v.1.4.1 and below only."
 	goto MainMenu_Inject_Options
@@ -1007,7 +1007,7 @@ goto MainMenu_Inject_Options
 ###########More##########
 
 @MainMenu_Scripts_from_Plailect's_Guide
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nScripts from Plailect's Guide"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nScripts from Plailect's Guide"
 
 labelsel -o -s "Choose an Option." Plailect_*
 goto Start
@@ -1016,7 +1016,7 @@ goto Start
 ##################Cleanup SD Card#################
 
 @Plailect_Cleanup_SD_Card
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nScripts from Plailect's Guide\n>Cleanup SD Card"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nScripts from Plailect's Guide\n>Cleanup SD Card"
 
 if	not ask "This will clean the final setup files from your SD.\n\nContinue?"
 	goto MainMenu_Scripts_from_Plailect's_Guide
@@ -1094,7 +1094,7 @@ goto MainMenu_Scripts_from_Plailect's_Guide
 ##############CTRTransfer Ticket Copy#############
 
 @Plailect_CTRTransfer_Ticket_Copy
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nScripts from Plailect's Guide\n>CTRTransfer Ticket Copy"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nScripts from Plailect's Guide\n>CTRTransfer Ticket Copy"
 
 if	not ask "This will copy CTRTransfer tickets,\nallowing for your games to work correctly.\n\nContinue?"
 	goto MainMenu_Scripts_from_Plailect's_Guide
@@ -1122,7 +1122,7 @@ goto MainMenu_Scripts_from_Plailect's_Guide
 ####################Remove NNID###################
 
 @Plailect_Remove_NNID
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nScripts from Plailect's Guide\n>Remove NNID"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nScripts from Plailect's Guide\n>Remove NNID"
 
 if	not ask "This will remove the NNID from your device.\n\nContinue?"
 	goto MainMenu_Scripts_from_Plailect's_Guide
@@ -1139,7 +1139,7 @@ goto MainMenu_Scripts_from_Plailect's_Guide
 ##################Remove extdata##################
 
 @Plailect_Remove_extdata
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nScripts from Plailect's Guide\n>Remove extdata"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nScripts from Plailect's Guide\n>Remove extdata"
 
 if	not ask "This will remove the HOME Menu extdata from your SD.\n\nContinue?"
 	goto MainMenu_Scripts_from_Plailect's_Guide
@@ -1161,7 +1161,7 @@ goto MainMenu_Scripts_from_Plailect's_Guide
 ###################Miscellaneous##################
 
 @MainMenu_Miscellaneous
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCredits:\nd0k3\n8bitwonder\nwindows_server_2003\nSvenDaHacker64\nMyLegGuy\nemillois\nAnalogMan151\nTurdPooCharger\netc."
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n"
 
 labelsel -o -s "Choose an Option." Miscellaneous_*
 goto Start
@@ -1169,7 +1169,7 @@ goto Start
 #################Cartridge Options################
 
 @Miscellaneous_Cartridge_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCartridge Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCartridge Options"
 
 labelsel -o -s "Choose an Option." Cartridge_Options_*
 goto MainMenu_Miscellaneous
@@ -1177,7 +1177,7 @@ goto MainMenu_Miscellaneous
 ################Dump Private Header###############
 
 @Cartridge_Options_Dump_Private_Header
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCartridge Options\n>Dump Private Header"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCartridge Options\n>Dump Private Header"
 
 if	not ask "Dump private header in $[GM9OUT]?"
 	goto Miscellaneous_Cartridge_Options
@@ -1195,7 +1195,7 @@ goto Miscellaneous_Cartridge_Options
 #################Dump Cart to .3ds################
 
 @Cartridge_Options_Dump_Cart_to_.3ds
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCartridge Options\n>Dump Cart to .3ds"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCartridge Options\n>Dump Cart to .3ds"
 
 if	not ask "Dump CTR cartridge to .3ds in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Cartridge_Options
@@ -1222,7 +1222,7 @@ goto Miscellaneous_Cartridge_Options
 #################Dump Cart to .cia################
 
 @Cartridge_Options_Dump_Cart_to_.cia
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCartridge Options\n>Dump Cart to .cia"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCartridge Options\n>Dump Cart to .cia"
 
 if	not ask "Dump CTR cartridge as a .cia in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Cartridge_Options
@@ -1243,7 +1243,7 @@ goto Miscellaneous_Cartridge_Options
 #################Dump Cart to .nds################
 
 @Cartridge_Options_Dump_Cart_to_.nds
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nCartridge Options\n>Dump Cart to .nds"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nCartridge Options\n>Dump Cart to .nds"
 
 if	not ask "Dump NTR cartridge as a .nds in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Cartridge_Options
@@ -1266,7 +1266,7 @@ goto Miscellaneous_Cartridge_Options
 ###################Title Options##################
 
 @Miscellaneous_Title_Options
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nTitle Options"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nTitle Options"
 
 labelsel -o -s "Choose an Option." Title_Options_*
 goto MainMenu_Miscellaneous
@@ -1274,7 +1274,7 @@ goto MainMenu_Miscellaneous
 ################Dump CTRNAND Titles###############
 
 @Title_Options_Dump_CTRNAND_Titles
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nTitle Options\n>Dump CTRNAND Titles"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nTitle Options\n>Dump CTRNAND Titles"
 
 if	not ask "Dump CTRNAND title to .cia in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Title_Options
@@ -1295,7 +1295,7 @@ goto Miscellaneous_Title_Options
 #################Dump User Titles#################
 
 @Title_Options_Dump_User_Installed_Titles
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nTitle Options\n>Dump User Installed Titles"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nTitle Options\n>Dump User Installed Titles"
 
 if	not ask "Dump user installed title to .cia in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Title_Options
@@ -1316,7 +1316,7 @@ goto Miscellaneous_Title_Options
 ################Dump TWLNAND Titles###############
 
 @Title_Options_Dump_TWLNAND_Titles
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nTitle Options\n>Dump TWLNAND Titles"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nTitle Options\n>Dump TWLNAND Titles"
 
 if	not ask "Dump TWLNAND title to .cia in $[GM9OUT]?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Title_Options
@@ -1339,7 +1339,7 @@ goto Miscellaneous_Title_Options
 ##############Dump Home Menu to .cia##############
 
 @Title_Options_Dump_HomeMenu_to_.cia
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nTitle Options\n>Dump HomeMenu to .cia"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nTitle Options\n>Dump HomeMenu to .cia"
 
 if	not ask "Dump HomeMenu to .cia?\n \nPlease make sure you have\nenough storage space."
 	goto Miscellaneous_Title_Options
@@ -1398,7 +1398,7 @@ goto Miscellaneous_Title_Options
 
 ################Clear Friendlist##################
 @Miscellaneous_Clear_Friendlist
-set PREVIEW_MODE "GODMODE9 ALL-IN-ONE MEGASCRIPT\nby annson24\n \nClear friendlist"
+set PREVIEW_MODE "RECOVERY FOX\nby ErgFox3ds\n \nClear friendlist"
 
 if	not ask "This script will delete friend code\nand friendlist,continue?"
 	echo "Operation Cancelled."
